@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form To Table</title>
+</head>
+
+<body>
+    <form>
+        Name: <input type="text" name="userName"><br>
+        Email: <input type="email" name="userEmail"><br>
+        Phone: <input type="number" name="userPhone"><br>
+        Address: <textarea name="userAddress" placeholder='Enter address...' maxlength='100' minlength='10'>
+          </textarea><br>
+        Gender: <input type="radio" name="userGender" value="male">male<input type="radio" name="userGender"
+            value="female">female<input type="radio" name="userGender" value="others">others<br>
+        City: <select name="userCity">
+            <option value="ahmedabad">ahmedabad</option>
+            <option value="surat">surat</option>
+            <option value="baroda">baroda</option>
+            <option value="jamnagar">jamnagar</option>
+        </select><br>
+        <input type="submit" onclick="send(this.form)">
+    </form>
+    <p id="details"></p>
+</body>
+<script src="script.js"></script>
+
+</html>
