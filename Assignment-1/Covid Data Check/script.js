@@ -8,13 +8,13 @@ const data = async (form) => {
     for (const i in Data["cases_time_series"]) {
         if (Data["cases_time_series"][i]["date"] === date) {
             document.getElementById("msg").innerHTML = ""
-            document.getElementById("tableContain").innerHTML = "<tr><td>New Cases</td><td>" + Data["cases_time_series"][i]["dailyconfirmed"] + "</td></tr><tr><td>New Deaths</td><td>" + Data["cases_time_series"][i]["dailydeceased"] + "</td></tr>"
+            document.getElementById("msg").innerHTML = "<table border='1'><tr><td>New Cases</td><td>" + Data["cases_time_series"][i]["dailyconfirmed"] + "</td></tr><tr><td>New Deaths</td><td>" + Data["cases_time_series"][i]["dailydeceased"] + "</td></tr></table>"
             found = true
             break
         }
     }
     if (!found) {
-        document.getElementById("tableContain").innerHTML = ""
+        document.getElementById("msg").innerHTML = ""
         document.getElementById("msg").innerHTML = "Date not found"
     }
 }
