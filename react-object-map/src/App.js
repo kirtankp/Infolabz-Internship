@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Object Data Map
+        Cases Time Series
         <DataTable cases_time_series={cases_time_series} />
       </div>
     );
